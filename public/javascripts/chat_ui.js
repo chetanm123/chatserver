@@ -35,12 +35,12 @@ $(document).ready(function(){
 
 	socket.on('nameResult',function(result){  //Display the results of a name change attempt
 		var message;
-		if(results.success){
+		if(result.success){
 			message='You are know as '+result.name+'.';
 		}else{
 			message=result.message;
 		}
-		$("#message").append(divSystemContentElement(message))
+		$("#messages").append(divSystemContentElement(message))
 	});
 
 	socket.on('joinResult',function(result){ //Display the results of a room change
@@ -50,11 +50,12 @@ $(document).ready(function(){
 
 	socket.on('message',function(message){ //Display received messages
 		var newElement=$("<div></div>").text(message.text);
-		$("#message").append(newElement);
+		$("#messages").append(newElement);
 	});
 
 	socket.on('rooms',function(rooms){ //Display list of rooms available
-		$("#rooms-list").empty();
+	
+		$("#room-list").empty('');
 		for(var room in rooms){
 			room = room.substring(1,room.length);
 			if(room!=''){
