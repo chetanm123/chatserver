@@ -1,7 +1,8 @@
 var http= require('http'),
 	url = require('url'),
 	fs = require('fs'),
-	path = require('path')
+	path = require('path'),
+	io = require('socket.io')
 	;
 
 var server = http.createServer(function(request,response){
@@ -11,6 +12,7 @@ var server = http.createServer(function(request,response){
 			case '/':
 				response.writeHead(200,{'Content-Type':'text/html'});
 				response.write('hello world');
+				response.end();
 				break;
 
 			case '/socket.html':
@@ -22,6 +24,7 @@ var server = http.createServer(function(request,response){
 						
 						response.writeHead(404);
 						response.write('Page not found socket.html' );
+						response.end();
 					}else{
 						
 						response.writeHead(200,"utf8",{'Content-Type':'text/html'});
@@ -39,3 +42,4 @@ var server = http.createServer(function(request,response){
 	
 });
 server.listen(3150);
+io.listen(server);
