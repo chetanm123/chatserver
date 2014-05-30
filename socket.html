@@ -33,9 +33,22 @@
   a:visited {
     color: purple }
   </style>
-  <script src='/socket.io/socket.io.js' type='text/javascript'>
+  
+  <script src='/socket.io/socket.io.js' type='text/javascript'></script>
+  <script type='text/javascript'>
 	var socket = io.connect();
-  </script>
+		socket.on('date',function(data){
+			document.getElementById('dt').innerHTML=data.date;
+		});
+	
+	window.onload=function(){
+	
+		document.getElementById('text').onkeypress=function(e){
+			socket.emit('client_data',{'letter':String.fromCharCode(e.charCode)});
+		}
+	}
+	</script>
+
 </head>
 
 <body>
@@ -63,6 +76,7 @@ what yet.
 <!-- Sign and date the page, it's only polite! -->
 <address>Made 5 April 2004<br>
   by myself.</address>
-
+<div id='dt'></div>
+<textarea id="text"></textarea>
 </body>
 </html>

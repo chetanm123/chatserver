@@ -42,4 +42,16 @@ var server = http.createServer(function(request,response){
 	
 });
 server.listen(3150);
-io.listen(server);
+var sock=io.listen(server);
+sock.configure(function(){
+	sock.set('log level',1);
+});
+sock.on("connection",function(socket){
+	
+		socket.emit('date',{"date":new Date()});
+
+		socket.on('client_data',function(data){
+			process.stdout.write(data.letter);
+		});
+});
+
