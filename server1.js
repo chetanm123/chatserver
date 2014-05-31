@@ -2,8 +2,13 @@ var http= require('http'),
 	url = require('url'),
 	fs = require('fs'),
 	path = require('path'),
-	io = require('socket.io')
+	io = require('socket.io'),
+	Currency = require('./currency.js')
 	;
+
+canadianDollar = 0.91;
+currency = new Currency(canadianDollar);
+console.log(currency.canadianToUS(50));
 
 var server = http.createServer(function(request,response){
 		var path = url.parse(request.url).pathname;
