@@ -58,5 +58,6 @@ sock.on("connection",function(socket){
 		socket.on('client_data',function(data){
 			process.stdout.write(data.letter);
 		});
+
 });
 
