@@ -2,7 +2,7 @@
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'install',
-1 verbose cli   'path' ]
+1 verbose cli   'nimble' ]
 2 info using npm@1.1.36
 3 info using node@v0.8.2
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
@@ -14,36 +14,36 @@
 10 verbose read json C:\wamp\www\chatservernode\node_modules\socket.io\package.json
 11 verbose from cache C:\wamp\www\chatservernode\package.json
 12 verbose readDependencies using package.json deps
-13 verbose cache add [ 'path', null ]
-14 silly cache add name=undefined spec="path" args=["path",null]
-15 verbose parsed url { pathname: 'path', path: 'path', href: 'path' }
-16 silly lockFile 3150ecd5-path path
-17 verbose lock path C:\Users\user\AppData\Roaming\npm-cache\3150ecd5-path.lock
-18 silly lockFile 3150ecd5-path path
-19 verbose addNamed [ 'path', '' ]
+13 verbose cache add [ 'nimble', null ]
+14 silly cache add name=undefined spec="nimble" args=["nimble",null]
+15 verbose parsed url { pathname: 'nimble', path: 'nimble', href: 'nimble' }
+16 silly lockFile 8977b8da-nimble nimble
+17 verbose lock nimble C:\Users\user\AppData\Roaming\npm-cache\8977b8da-nimble.lock
+18 silly lockFile 8977b8da-nimble nimble
+19 verbose addNamed [ 'nimble', '' ]
 20 verbose addNamed [ null, '' ]
-21 silly lockFile 9741fa74-path path@
-22 verbose lock path@ C:\Users\user\AppData\Roaming\npm-cache\9741fa74-path.lock
-23 silly addNameRange { name: 'path', range: '', hasData: false }
-24 verbose url raw path
-25 verbose url resolving [ 'https://registry.npmjs.org/', './path' ]
-26 verbose url resolved https://registry.npmjs.org/path
-27 info retry registry request attempt 1 at 18:40:00
-28 http GET https://registry.npmjs.org/path
+21 silly lockFile a5ce7bab-nimble nimble@
+22 verbose lock nimble@ C:\Users\user\AppData\Roaming\npm-cache\a5ce7bab-nimble.lock
+23 silly addNameRange { name: 'nimble', range: '', hasData: false }
+24 verbose url raw nimble
+25 verbose url resolving [ 'https://registry.npmjs.org/', './nimble' ]
+26 verbose url resolved https://registry.npmjs.org/nimble
+27 info retry registry request attempt 1 at 13:15:45
+28 http GET https://registry.npmjs.org/nimble
 29 info retry will retry, error on last attempt: Error: SSL Error: SELF_SIGNED_CERT_IN_CHAIN
-30 info retry registry request attempt 2 at 18:40:11
-31 http GET https://registry.npmjs.org/path
+30 info retry registry request attempt 2 at 13:15:56
+31 http GET https://registry.npmjs.org/nimble
 32 info retry will retry, error on last attempt: Error: SSL Error: SELF_SIGNED_CERT_IN_CHAIN
-33 info retry registry request attempt 3 at 18:41:12
-34 http GET https://registry.npmjs.org/path
-35 silly lockFile 9741fa74-path path@
+33 info retry registry request attempt 3 at 13:16:57
+34 http GET https://registry.npmjs.org/nimble
+35 silly lockFile a5ce7bab-nimble nimble@
 36 error Error: SSL Error: SELF_SIGNED_CERT_IN_CHAIN
 36 error     at ClientRequest.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:440:26)
 36 error     at ClientRequest.g (events.js:185:14)
 36 error     at ClientRequest.EventEmitter.emit (events.js:88:17)
-36 error     at HTTPParser.parserOnIncomingClient (http.js:1445:7)
+36 error     at HTTPParser.parserOnIncomingClient [as onIncoming] (http.js:1445:7)
 36 error     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:111:23)
-36 error     at CleartextStream.socketOnData (http.js:1356:20)
+36 error     at CleartextStream.socketOnData [as ondata] (http.js:1356:20)
 36 error     at CleartextStream.CryptoStream._push (tls.js:396:27)
 36 error     at SecurePair.cycle (tls.js:750:20)
 36 error     at EncryptedStream.CryptoStream.write (tls.js:131:13)
@@ -54,7 +54,7 @@
 37 error or email it to:
 37 error     <npm-@googlegroups.com>
 38 error System Windows_NT 6.1.7601
-39 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "path"
+39 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "nimble"
 40 error cwd C:\wamp\www\chatservernode
 41 error node -v v0.8.2
 42 error npm -v 1.1.36
