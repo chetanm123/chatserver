@@ -1,0 +1,1 @@
+Adds each task to an array of functions to call in parallel.

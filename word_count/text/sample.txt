@@ -1,0 +1,2 @@
+When all tasks have completed, a list displays of each word used in the files and
+how many times it was used.
