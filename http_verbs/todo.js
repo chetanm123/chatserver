@@ -33,6 +33,7 @@ var server  = http.createServer(function(req,res){
 			
 			break;
 		case "PUT":
+			// PUT curl command --> curl -X PUT -d "payload" http://localhost:3000/1
 			req.on("data",function(chunk){
 				var path=url.parse(req.url).pathname;
 				var i =	parseInt(path.slice(1),10);
@@ -49,6 +50,7 @@ var server  = http.createServer(function(req,res){
 			});
 			break;
 		case 'DELETE':
+			//DELETE curl command --> curl -X "DELETE" http://localhost:3000/1
 			var path=url.parse(req.url).pathname;
 			var i =	parseInt(path.slice(1),10);
 			if(isNaN(i)){

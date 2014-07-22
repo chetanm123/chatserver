@@ -15,5 +15,8 @@ var server = http.createServer(function(req,res){
 		res.end();
 	});*/
 	stream.pipe(res);
+	stream.on("error",function(err){
+		console.log(err);
+	});
 });
 server.listen(3000);
